@@ -11,7 +11,8 @@ Normally in a formal grammar, we re-write one (non-terminal) symbol at a time, w
 
 In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prusinkiewicz to use L-systems and Turtle graphics for generating lifelike plant forms and visualizing them. Turtle graphics uses symbols as graphical commands: F,+,-,[,] represent draw forward, rotate right, rotate left, push state, and restore state respectively. However, in our code we have opted to draw our branches using the python library Matplotlib (typically used for visualizing plots) since we use it more often in our studies and find it easier and more intuitive.
 
-## Code
+## Simulation Code
+### <u>Initial model</u>
 Our first simulation was based on an example of an L-system described in this paper, which describes the following grammar:
 
 <p align="center">
@@ -19,7 +20,22 @@ Our first simulation was based on an example of an L-system described in this pa
 </p>
 
 where:\
-• Σis the alphabet of symbols,\
+• Σ is the alphabet of symbols,\
 • ω is the initial symbol, and\
 • P is the set of substitution rules that determine the patterns.
+
+The specific example had these symbols:\
+• Σ={a(θ),s(l),t(l),[,]},\
+• ω=t(1), and\
+• P =t(l) →s(.6l)[a(−45)t(.4l)][a(45)t(.4l)]\
+
+and these symbols were defined as:\
+• a(θ): make a turn of θ degrees clockwise,\
+• s(l): create a middle segment of length l (these segments will not be modified
+further),\
+• t(l): create a leaf (terminal) segment of length l (these segments will be
+subdivided in further steps),\
+• [: start a new branch from the end of the previous middle segment,\
+• ]: end of the branch that was started most recently;\
+
 

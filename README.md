@@ -13,10 +13,13 @@ In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prus
 
 ## Code
 Our first simulation was based on an example of an L-system described in this paper, which describes the following grammar:
-G=(Σ,ω,P)
 
-where:
-• Σis the alphabet of symbols,
-• ω is the initial symbol, and
+<p align="center">
+  G=(Σ,ω,P)
+</p>
+
+where:\
+• Σis the alphabet of symbols,\
+• ω is the initial symbol, and\
 • P is the set of substitution rules that determine the patterns.
 

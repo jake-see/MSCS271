@@ -36,6 +36,11 @@ further),\
 • t(l): create a leaf (terminal) segment of length l (these segments will be
 subdivided in further steps),\
 • [: start a new branch from the end of the previous middle segment,\
-• ]: end of the branch that was started most recently;\
+• ]: end of the branch that was started most recently;
+
+In simple terms, it would recursively draw a middle branch and at the end of it, two shorter child branches at 45 degrees and 40% of the previous length. The new middle branch would then be 60% of the previous length.
+
+### <u>Second model</u>
+
 
 

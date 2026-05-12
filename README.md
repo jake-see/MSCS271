@@ -71,7 +71,7 @@ In real-life, arteries don't usually branch symmetrically and at fixed lengths, 
 We then added an interactive element so the user could input their desired bounds. This was the updated production:
 
 <p align="center">
- t(l) → s(0.6l)[a(random angle 1)t(random length 1, child width)][a(random angle 2)t(random length 2, child width)]...[a(random angle n)t(random length n, child width)]
+ t(l) → s(0.6l)[a(random angle 1)t(random length 1)][a(random angle 2)t(random length 2)]...[a(random angle n)t(random length n)]
   
   for n number of branches.
 </p>
@@ -86,7 +86,7 @@ Murray's law states that the radius of a parent vessel equals the sum of the cub
 We also changed the color to red to make it look more like blood vessels (the gradient is an aesthetic choice to reflect depth of the branches and doesn't reflect real biology). Here is the updated production:
 
 <p align="center">
- t(l) → s(0.6l)[a(random angle 1)t(random length 1)][a(random angle 2)t(random length 2)]...[a(random angle n)t(random length n)]
+ t(l) → s(0.6l)[a(random angle 1)t(random length 1, child width)][a(random angle 2)t(random length 2, child width)]...[a(random angle n)t(random length n, child width)]
   
   for n number of branches.
 </p>

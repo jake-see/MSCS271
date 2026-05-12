@@ -43,7 +43,7 @@ Our first simulation was based on an example of an L-system described in this pa
 where:
 - Σ is the alphabet of symbols,
 - ω is the initial symbol, and
-&emsp;• P is the set of substitution rules that determine the patterns.
+- P is the set of substitution rules that determine the patterns.
 
 The specific example had these symbols:
 - Σ={a(θ),s(l),t(l),[,]},

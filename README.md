@@ -1,4 +1,4 @@
-# Recursive Stochastic Model for Arterial Branching Inspired by L-systems
+# Recursive Stochastic Model for Arterial Branching Based On L-systems
 Semester Project for MSCS&ndash;271: Formal Languages and Finite Automata (Spring 2026)\
 University of Wisconsin&ndash;Stout\
 by Evelyn Vo and Jake See
@@ -31,8 +31,7 @@ In 1968, theoretical biologist Aristid Lindenmayer published a paper with a math
 
 Normally in a formal grammar, we re-write one (non-terminal) symbol at a time, with sequential derivation. In L-systems, we just re-write the symbols (entire string) simultaneously.
 
-In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prusinkiewicz to use L-systems and Turtle graphics for generating lifelike plant forms and visualizing them [[2]](#ref2). Turtle graphics uses symbols as graphical commands: F,+,-,[,] represent draw forward, rotate right, rotate left, push state, and restore state respectively. In a strict L-system, the symbols are re-written into a longer string, and then Turtle graphics would be used to interpret the symbols and visualize it. However, in our code we have opted to draw our branches using the python library Matplotlib (typically used for visualizing plots) since we use it more often in our studies and find it easier and more intuitive.
-As such, it becomes more of a procedural branching that's inspired by L-systems.
+In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prusinkiewicz to use L-systems and Turtle graphics for generating lifelike plant forms and visualizing them [[2]](#ref2). Turtle graphics uses symbols as graphical commands: F,+,-,[,] represent draw forward, rotate right, rotate left, push state, and restore state respectively. However, in our code we have opted to draw our branches using the python library Matplotlib (typically used for visualizing plots) since we use it more often in our studies and find it easier and more intuitive. In a strict L-system, the symbols are re-written into a longer string, before being visualized. However, in our code we don't rewrite the whole string and instead recursively call new parameters, so it becomes a procedural branching that uses the underlying principles behind L-systems.
 
 ## Model Iterations
 ### Initial model

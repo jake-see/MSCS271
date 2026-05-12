@@ -35,7 +35,7 @@ In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prus
 
 
 
-## Simulation model iterations
+## Simulation Model Iterations
 ### Initial model
 Our first simulation was based on an example of an L-system described in [this bachelor thesis](https://upcommons.upc.edu/server/api/core/bitstreams/1466f8fb-4396-47f9-8e99-7c241aa3b7d6/content) by Sergi L&aacute;zaro [[3]](#ref3), which describes the following grammar:
 

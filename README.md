@@ -1,4 +1,4 @@
-# Recursive Stochastic L-system for Simulation Arterial Branching
+# Recursive Stochastic Model for Arterial Branching Inspired by L-systems
 Semester Project for MSCS&ndash;271: Formal Languages and Finite Automata (Spring 2026)\
 University of Wisconsin&ndash;Stout\
 by Evelyn Vo and Jake See
@@ -8,7 +8,7 @@ In a formal language, we have an alphabet (symbols), rules for generating string
 
 Special thanks to our instructor, Dr. Seth Dutter.
 
-### Main Simulation Features
+### Main Model Features
 Each vessel segment produces:
 - A forward-growing main vessel
 - Multiple child branches with randomized angles and lengths
@@ -31,11 +31,10 @@ In 1968, theoretical biologist Aristid Lindenmayer published a paper with a math
 
 Normally in a formal grammar, we re-write one (non-terminal) symbol at a time, with sequential derivation. In L-systems, we just re-write the symbols (entire string) simultaneously.
 
-In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prusinkiewicz to use L-systems and Turtle graphics for generating lifelike plant forms and visualizing them [[2]](#ref2). Turtle graphics uses symbols as graphical commands: F,+,-,[,] represent draw forward, rotate right, rotate left, push state, and restore state respectively. However, in our code we have opted to draw our branches using the python library Matplotlib (typically used for visualizing plots) since we use it more often in our studies and find it easier and more intuitive.
+In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prusinkiewicz to use L-systems and Turtle graphics for generating lifelike plant forms and visualizing them [[2]](#ref2). Turtle graphics uses symbols as graphical commands: F,+,-,[,] represent draw forward, rotate right, rotate left, push state, and restore state respectively. In a strict L-system, the symbols are re-written into a longer string, and then Turtle graphics would be used to interpret the symbols and visualize it. However, in our code we have opted to draw our branches using the python library Matplotlib (typically used for visualizing plots) since we use it more often in our studies and find it easier and more intuitive.
+As such, it becomes more of a procedural branching that's inspired by L-systems.
 
-
-
-## Simulation Model Iterations
+## Model Iterations
 ### Initial model
 Our first simulation was based on an example of an L-system described in [this bachelor thesis](https://upcommons.upc.edu/server/api/core/bitstreams/1466f8fb-4396-47f9-8e99-7c241aa3b7d6/content) by Sergi L&aacute;zaro [[3]](#ref3), which describes the following grammar:
 

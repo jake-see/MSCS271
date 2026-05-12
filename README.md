@@ -4,7 +4,7 @@ University of Wisconsin&ndash;Stout\
 by Evelyn Vo and Jake See
 
 The goal of our project was to find and reproduce an application of a concept that we learned in this class, specifically formal grammars.\
-In a formal language, we have an alphabet (symbols), rules for generating strings (productions), and a set of valid strings (the language). Lindenmayer systems (L-systems) use the same underlying principles. We have created an interactive code that simulates how arteries branch using L-systems as the underlying recursive algorithm.
+In a formal language, we have an alphabet (symbols), rules for generating strings (productions), and a set of valid strings (the language). Lindenmayer systems (L-systems) use the same underlying principles. We have created an interactive code that simulates how arteries branch with a recursive algorithm inspired by L-systems.
 
 Special thanks to our instructor, Dr. Seth Dutter.
 

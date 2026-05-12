@@ -1,9 +1,12 @@
 # Recursive Stochastic L-system for Simulation Arterial Branching
-Semester Project for MSCS-271: Formal Languages and Finite Automata\
+Semester Project for MSCS&ndash;271: Formal Languages and Finite Automata (Spring 2026)\
+University of Wisconsin&ndash;Stout\
 by Evelyn Vo and Jake See
 
 The goal of our project was to find and reproduce an application of a concept that we learned in this class, specifically formal grammars.\
 In a formal language, we have an alphabet (symbols), rules for generating strings (productions), and a set of valid strings (the language). Lindenmayer systems (L-systems) use the same underlying principles. We have created an interactive code that simulates how arteries branch using L-systems as the underlying recursive algorithm.
+
+Special thanks to our instructor, Dr. Seth Dutter.
 
 ### Main Simulation Features
 Each vessel segment produces:
@@ -24,17 +27,17 @@ Mathematical concepts:
 We have included both a python file (.py) and a Jupyter Notebook file (.ipynb) of our final model. After running the code, simply input the upper and lower bounds for randomizing the angle and length changes. The starting angle is 45 degrees and starting length is 100 units, so the bounds add and subtract from them to form new bounds, and then a random number is chosen within those bounds. The default depth is 6. You may decline from inputting anything and press enter for the default values to be used. After all 5 inputs, the visual will be generated.
 
 ## Context
-In 1968, theoretical biologist Aristid Lindenmayer published a paper with a mathematical theory of biological development, defining a formal rewriting system to model how cells change over time.
+In 1968, theoretical biologist Aristid Lindenmayer published a paper with a mathematical theory of biological development, defining a formal rewriting system to model how cells change over time [[1]](#ref1).
 
 Normally in a formal grammar, we re-write one (non-terminal) symbol at a time, with sequential derivation. In L-systems, we just re-write the symbols (entire string) simultaneously.
 
-In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prusinkiewicz to use L-systems and Turtle graphics for generating lifelike plant forms and visualizing them. Turtle graphics uses symbols as graphical commands: F,+,-,[,] represent draw forward, rotate right, rotate left, push state, and restore state respectively. However, in our code we have opted to draw our branches using the python library Matplotlib (typically used for visualizing plots) since we use it more often in our studies and find it easier and more intuitive.
+In 1990, Lindenmayer co-authored a paper with computer scientist Przemyslaw Prusinkiewicz to use L-systems and Turtle graphics for generating lifelike plant forms and visualizing them [[2]](#ref2). Turtle graphics uses symbols as graphical commands: F,+,-,[,] represent draw forward, rotate right, rotate left, push state, and restore state respectively. However, in our code we have opted to draw our branches using the python library Matplotlib (typically used for visualizing plots) since we use it more often in our studies and find it easier and more intuitive.
 
 
 
 ## Simulation model iterations
 ### Initial model
-Our first simulation was based on an example of an L-system described in this paper, which describes the following grammar:
+Our first simulation was based on an example of an L-system described in [this bachelor thesis](https://upcommons.upc.edu/server/api/core/bitstreams/1466f8fb-4396-47f9-8e99-7c241aa3b7d6/content) by Sergi L&aacute;zaro [[3]](#ref3), which describes the following grammar:
 
 <p align="center">
   G=(Σ,ω,P)
@@ -82,7 +85,7 @@ Here's a visual example:
 
 ### Final model
 To make it even more realistic, we decided to use implement Murray's law for scaling the radius of the vessel as it splits and narrows (in this case the width of the child branch since it's 2D).
-Murray's law states that the radius of a parent vessel equals the sum of the cubes of the radii of its daughter branches. This implies that as vessels branch, the radii narrow in a specific proportion.
+Murray's law states that the radius of a parent vessel equals the sum of the cubes of the radii of its daughter branches [[4]](#ref4). This implies that as vessels branch, the radii narrow in a specific proportion.
 We also changed the color to red to make it look more like blood vessels (the gradient is an aesthetic choice to reflect depth of the branches and doesn't reflect real biology). Here is the updated production:
 
 <p align="center">
@@ -95,6 +98,15 @@ Here is a visual example:
 
 <img width="500" height="634" alt="image" src="https://github.com/user-attachments/assets/20396e4d-fc0e-4068-ae67-19607461a8f7" />
 
+## References
+<a id="ref1"></a>
+[1] A. Lindenmayer, “Mathematical models for cellular interactions in development I. Filaments with one-sided inputs,” Journal of Theoretical Biology, vol. 18, no. 3, pp. 280–299, 1968.
 
+<a id="ref2"></a>
+[2] P. Prusinkiewicz and A. Lindenmayer, *The Algorithmic Beauty of Plants*. New York, NY, USA: Springer-Verlag, 1990.
 
+<a id="ref3"></a>
+[3] S. Lázaro, *Modelling of Realistic Blood Vessel Geometry*, Bachelor thesis, Gottfried Wilhelm Leibniz Universität Hannover, Hannover, Germany, Sep. 2011. Available: https://upcommons.upc.edu/server/api/core/bitstreams/1466f8fb-4396-47f9-8e99-7c241aa3b7d6/content
 
+<a id="ref4"></a>
+[4] C. D. Murray, “The physiological principle of minimum work: I. The vascular system and the cost of blood volume,” Proceedings of the National Academy of Sciences, vol. 12, no. 3, pp. 207–214, 1926.

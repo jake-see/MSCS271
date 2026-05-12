@@ -1,5 +1,6 @@
 # Recursive Stochastic L-system for Simulation Arterial Branching
-Semester Project for MSCS-271: Formal Languages and Finite Automata
+Semester Project for MSCS-271: Formal Languages and Finite Automata\
+by Evelyn Vo and Jake See
 
 The goal of our project was to find and reproduce an application of a concept that we learned in this class, specifically formal grammars.\
 In a formal language, we have an alphabet (symbols), rules for generating strings (productions), and a set of valid strings (the language). Lindenmayer systems (L-systems) use the same underlying principles. We have created an interactive code that simulates how arteries branch using L-systems as the underlying recursive algorithm.
@@ -20,7 +21,7 @@ Mathematical concepts:
 - Stochastic parameter sampling
 
 ## Code Instructions
-We have included both a python file (.py) and a Jupyter Notebook file (.ipynb). After running the code, simply input the upper and lower bounds for randomizing the angle and length changes. The starting angle is 45 degrees and starting length is 100 units, so the bounds add and subtract from them to form new bounds, and then a random number is chosen within those bounds. The default depth is 6. You may decline from inputting anything and press enter for the default values to be used. After all 5 inputs, the visual will be generated.
+We have included both a python file (.py) and a Jupyter Notebook file (.ipynb) of our final model. After running the code, simply input the upper and lower bounds for randomizing the angle and length changes. The starting angle is 45 degrees and starting length is 100 units, so the bounds add and subtract from them to form new bounds, and then a random number is chosen within those bounds. The default depth is 6. You may decline from inputting anything and press enter for the default values to be used. After all 5 inputs, the visual will be generated.
 
 ## Context
 In 1968, theoretical biologist Aristid Lindenmayer published a paper with a mathematical theory of biological development, defining a formal rewriting system to model how cells change over time.
